@@ -26,16 +26,15 @@ Settings: Esc > Options > AddOns > TSMBrowse.
 - `/tsmbrowse span <n>`: skill points from a recipe's required skill to grey (default 50)
 - `/tsmbrowse settings`: the Settings panel
 
-## Install
+## TSM patch (for the category panel)
 
-You need [TradeSkillMaster](https://tradeskillmaster.com).
-
-Your addon manager (CurseForge, Wago) installs the recipe tooltips. The category panel also
-needs one small TSM patch, because TSM's Browse tab has no way for another addon to start a
-search:
+TSM's Browse tab has no way for another addon to start a search, so the category panel needs
+one small TSM patch; the recipe tooltips work without it. This repository's installer adds
+it:
 
 1. Install PowerShell 7: `winget install Microsoft.PowerShell` in a terminal.
-2. Download this repository (green **Code** button, **Download ZIP**) and extract it.
+2. Download [this repository](https://github.com/MeioNeiz/TSMBrowse) (green **Code** button,
+   **Download ZIP**) and extract it.
 3. Close WoW, open a terminal in that folder and run
    `pwsh -ExecutionPolicy Bypass -File mods.ps1`
    (add `-AddOns "<your _forever_\Interface\AddOns folder>"` if WoW is installed elsewhere).
@@ -50,6 +49,12 @@ again (TSMBrowse reminds you at login). To undo it:
 
 Skill-up points are estimates (the game has no colour data for recipes you haven't learned).
 Made and tested on an English client with TradeSkillMaster v4.15.9.
+
+## Install
+
+You need [TradeSkillMaster](https://tradeskillmaster.com). Use your addon manager (CurseForge,
+Wago), or unzip a GitHub release into `World of Warcraft\_forever_\Interface\AddOns` and
+restart WoW fully; then add the TSM patch above for the category panel.
 
 ## Feedback
 
