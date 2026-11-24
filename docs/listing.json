@@ -1,0 +1,29 @@
+{
+  "title": "Meio TSM Browse",
+  "summary": "A category tree beside TradeSkillMaster's Browse tab, like the standard auction house, plus recipe skill-up help in tooltips.",
+  "cfCategory": "Auction & Economy",
+  "cfExtra": [
+    "Professions"
+  ],
+  "wagoCategories": [
+    "Auction & Economy",
+    "Professions"
+  ],
+  "gallery": [
+    {
+      "file": "before-after.png",
+      "title": "Before and after",
+      "description": "TSM's Browse tab alone, then with the category tree beside it and Recipe > Tailoring searched"
+    },
+    {
+      "file": "recipe-skill-ups.png",
+      "title": "Recipe tooltip",
+      "description": "A pattern you can learn, with skill-ups until about 170; Shift shows the orange, yellow, green and grey points"
+    },
+    {
+      "file": "recipe-too-high.png",
+      "title": "Recipe too high",
+      "description": "A pattern you need 14 more Tailoring skill to learn"
+    }
+  ]
+}

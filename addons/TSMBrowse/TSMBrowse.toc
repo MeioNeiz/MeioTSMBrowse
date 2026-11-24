@@ -1,0 +1,14 @@
+## Interface: 16001
+## Title: TSMBrowse
+## Notes: A category tree and level presets beside TradeSkillMaster's Browse tab, plus recipe skill-up help in item tooltips.
+## Version: 1.0.0
+## Author: MeioNeiz
+## X-Website: https://github.com/MeioNeiz/TSMBrowse
+## X-License: MIT
+## OptionalDeps: TradeSkillMaster
+## Category: Meio
+## IconTexture: Interface\Icons\INV_Scroll_03
+## SavedVariables: TSMBrowseDB
+## X-LocalMods-Patches: 14-tsm-browse-hooks
+
+TSMBrowse.lua

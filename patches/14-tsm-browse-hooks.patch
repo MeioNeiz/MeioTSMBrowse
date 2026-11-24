@@ -1,0 +1,94 @@
+Title: TSM Browse tab hook points (used by the TSMBrowse overlay)
+Why: TSM's Browse tab has no public way to start a search, read its item class lists or add filter words, so the TSMBrowse category tree can't drive it. Exposes TSMLocalShopping (Search(filter), the TSM window, TSM's class/subclass/slot names, a shown/hidden callback) and TSMLocalAddItemFilter(word, func), which adds a filter word applied to every auction result (TSMBrowse's learnable / skillup).
+
+=== FILE TradeSkillMaster\App\AuctionUI\Shopping.lua
+--- OLD
+	TaskList.HandleShoppingTaskUIUpdate()
+	TaskList.SetShoppingTaskUIVisible(true)
+	return frame
+--- NEW
+	TaskList.HandleShoppingTaskUIUpdate()
+	TaskList.SetShoppingTaskUIVisible(true)
+	private.LocalNotify(frame) -- LOCAL FIX: TSMBrowse overlay
+	return frame
+=== END
+
+=== FILE TradeSkillMaster\App\AuctionUI\Shopping.lua
+--- OLD
+	if action == "ACTION_FRAME_HIDDEN" then
+		TaskList.HandleShoppingTaskUIUpdate()
+		TaskList.SetShoppingTaskUIVisible(false)
+--- NEW
+	if action == "ACTION_FRAME_HIDDEN" then
+		TaskList.HandleShoppingTaskUIUpdate()
+		TaskList.SetShoppingTaskUIVisible(false)
+		private.LocalNotify(nil) -- LOCAL FIX: TSMBrowse overlay
+=== END
+
+=== FILE TradeSkillMaster\App\AuctionUI\Shopping.lua
+--- OLD
+function private.IsPlayer(character, includeAlts)
+--- NEW
+-- LOCAL FIX: hook points for the TSMBrowse overlay (LocalMods)
+local LocalItemClass = App:From("LibTSMWoW"):Include("Util.ItemClass")
+TSMLocalShopping = {
+	callbacks = {},
+	Search = function(filter)
+		if not private.localFrame then
+			return false
+		end
+		private.manager:ProcessAction("ACTION_START_FILTER_SEARCH", filter)
+		return true
+	end,
+	GetWindow = function()
+		local base = private.localFrame and private.localFrame:GetBaseElement()
+		return base and base:_GetBaseFrame()
+	end,
+	GetClasses = function() return LocalItemClass.GetClasses() end,
+	GetSubClasses = function(class) return LocalItemClass.GetSubClasses(class) end,
+	GetGenericSlots = function(class)
+		local result = {}
+		for _, slot in LocalItemClass.GenericInventorySlotStringIterator(class) do
+			tinsert(result, slot)
+		end
+		return result
+	end,
+	GetSlots = function(class, subClass) return LocalItemClass.GetInventorySlots(class, subClass) end,
+}
+
+function private.LocalNotify(frame)
+	private.localFrame = frame
+	for _, func in ipairs(TSMLocalShopping.callbacks) do
+		func(frame ~= nil)
+	end
+end
+
+function private.IsPlayer(character, includeAlts)
+=== END
+
+=== FILE TradeSkillMaster\LibTSMApp\Source\Shopping\Internal\FilterSearch.lua
+--- OLD
+local ITEM_FILTER_ERROR_LOOKUP = {
+--- NEW
+-- LOCAL FIX: lets the TSMBrowse overlay (LocalMods) add filter words, applied to each auction result
+private.localFilters = {}
+function TSMLocalAddItemFilter(key, evalFunc)
+	ItemFilter.AddKeyMatchPart(key, evalFunc)
+	private.localFilters[key] = function(_, row)
+		return not evalFunc(row:GetBaseItemString())
+	end
+end
+local ITEM_FILTER_ERROR_LOOKUP = {
+=== END
+
+=== FILE TradeSkillMaster\LibTSMApp\Source\Shopping\Internal\FilterSearch.lua
+--- OLD
+	CanIMogItIntegration.PopulateAuctionQuery(query, itemFilter)
+--- NEW
+	CanIMogItIntegration.PopulateAuctionQuery(query, itemFilter)
+	for key, filter in pairs(private.localFilters) do -- LOCAL FIX: TSMBrowse filter words
+		if itemFilter:GetAddedKeyValue(key) then
+			query:AddCustomFilter(filter)
+		end
+	end
+=== END
