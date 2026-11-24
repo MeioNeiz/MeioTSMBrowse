@@ -5,6 +5,8 @@
 ## Author: MeioNeiz
 ## X-Website: https://github.com/MeioNeiz/TSMBrowse
 ## X-License: MIT
+## X-Curse-Project-ID: 1829123
+## X-Wago-ID: x61xoWN1
 ## OptionalDeps: TradeSkillMaster
 ## Category: Meio
 ## IconTexture: Interface\Icons\INV_Scroll_03
