@@ -1,5 +1,5 @@
-Title: TSM Browse tab hook points (used by the TSMBrowse overlay)
-Why: TSM's Browse tab has no public way to start a search, read its item class lists or add filter words, so the TSMBrowse category tree can't drive it. Exposes TSMLocalShopping (Search(filter), the TSM window, TSM's class/subclass/slot names, a shown/hidden callback) and TSMLocalAddItemFilter(word, func), which adds a filter word applied to every auction result (TSMBrowse's learnable / skillup).
+Title: TSM Browse tab hook points (used by the MeioTSMBrowse overlay)
+Why: TSM's Browse tab has no public way to start a search, read its item class lists or add filter words, so the MeioTSMBrowse category tree can't drive it. Exposes TSMLocalShopping (Search(filter), the TSM window, TSM's class/subclass/slot names, a shown/hidden callback) and TSMLocalAddItemFilter(word, func), which adds a filter word applied to every auction result (MeioTSMBrowse's learnable / skillup).
 
 === FILE TradeSkillMaster\App\AuctionUI\Shopping.lua
 --- OLD

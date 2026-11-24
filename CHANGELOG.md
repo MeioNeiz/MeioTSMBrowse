@@ -1,4 +1,4 @@
-# TSMBrowse
+# MeioTSMBrowse
 
 ## 1.0.0
 

@@ -1,4 +1,4 @@
--- TSMBrowse: a category tree and level filter docked beside TSM's Browse (Shopping) tab,
+-- MeioTSMBrowse: a category tree and level filter docked beside TSM's Browse (Shopping) tab,
 -- like the standard auction house, plus recipe help for your professions.
 --
 -- A category click runs a TSM filter string
@@ -10,8 +10,8 @@
 -- recipes you haven't learned. Vanilla's usual spread is yellow +25, green +37, grey +50
 -- over the required skill; `span` moves the grey point and the others scale with it.
 
-local NAME = "TSMBrowse"
-local SV_NAME = "TSMBrowseDB"
+local NAME = "MeioTSMBrowse"
+local SV_NAME = "MeioTSMBrowseDB"
 local SLASH = "/tsmbrowse"
 local PATCH = "14-tsm-browse-hooks"
 
@@ -741,7 +741,7 @@ local function OnShoppingShown(shown)
 end
 
 --------------------------------------------------
--- Settings panel (Esc > Options > AddOns > TSMBrowse), bound straight to TSMBrowseDB, in the
+-- Settings panel (Esc > Options > AddOns > MeioTSMBrowse), bound straight to MeioTSMBrowseDB, in the
 -- same words as the chat commands
 --------------------------------------------------
 local category, layout

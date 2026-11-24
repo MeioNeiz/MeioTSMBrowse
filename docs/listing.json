@@ -1,5 +1,6 @@
 {
   "title": "Meio TSM Browse",
+  "wagoSlug": "tsmbrowse",
   "summary": "A category tree beside TradeSkillMaster's Browse tab, like the standard auction house, plus recipe skill-up help in tooltips.",
   "cfCategory": "Auction & Economy",
   "cfExtra": [

@@ -2,7 +2,7 @@
 
 Categories beside TradeSkillMaster's Browse tab, like the standard auction house.
 
-![TSM's Browse tab: before, only its search box; with TSMBrowse, a category tree beside it and
+![TSM's Browse tab: before, only its search box; with MeioTSMBrowse, a category tree beside it and
 Recipe > Tailoring searched in one click](docs/before-after.png)
 
 ## What it does
@@ -16,7 +16,7 @@ type. Recipe tooltips tell you whether you can learn a recipe and how long it gi
 - Recipe tooltips anywhere in the game; hold Shift for the estimated orange / yellow /
   green / grey points
 
-Settings: Esc > Options > AddOns > TSMBrowse.
+Settings: Esc > Options > AddOns > MeioTSMBrowse.
 
 ## Commands
 
@@ -33,7 +33,7 @@ one small TSM patch; the recipe tooltips work without it. This repository's inst
 it:
 
 1. Install PowerShell 7: `winget install Microsoft.PowerShell` in a terminal.
-2. Download [this repository](https://github.com/MeioNeiz/TSMBrowse) (green **Code** button,
+2. Download [this repository](https://github.com/MeioNeiz/MeioTSMBrowse) (green **Code** button,
    **Download ZIP**) and extract it.
 3. Close WoW, open a terminal in that folder and run
    `pwsh -ExecutionPolicy Bypass -File mods.ps1`
@@ -42,9 +42,9 @@ it:
 
 The installer copies the addon, edits only the two TSM files the patch names
 (`patches\14-tsm-browse-hooks.patch`, every new line marked `LOCAL FIX`), keeps a backup of
-each in `backups\`, and changes nothing if TSM's code has moved on. Without TSMBrowse the
+each in `backups\`, and changes nothing if TSM's code has moved on. Without MeioTSMBrowse the
 patched TSM behaves exactly as before. A TSM update undoes the patch: run the installer
-again (TSMBrowse reminds you at login). To undo it:
+again (MeioTSMBrowse reminds you at login). To undo it:
 `pwsh -ExecutionPolicy Bypass -File mods.ps1 revert 14-tsm-browse-hooks`, or reinstall TSM.
 
 Skill-up points are estimates (the game has no colour data for recipes you haven't learned).
@@ -58,7 +58,7 @@ restart WoW fully; then add the TSM patch above for the category panel.
 
 ## Feedback
 
-Bugs and ideas: [GitHub issues](https://github.com/MeioNeiz/TSMBrowse/issues)
+Bugs and ideas: [GitHub issues](https://github.com/MeioNeiz/MeioTSMBrowse/issues)
 
 ## More Meio addons
 
