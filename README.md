@@ -20,6 +20,10 @@ type. Recipe tooltips tell you whether you can learn a recipe and how long it gi
 - Recipe tooltips anywhere in the game; hold Shift for the estimated orange / yellow /
   green / grey points
 
+![Tailoring patterns in TSM's Browse tab: hovering Pattern: Shadow Hood shows "Learnable:
+skill-ups until ~185 (you: 151)" and, with Shift, the orange, yellow, green and grey
+points](docs/recipe-in-tsm.png)
+
 Settings: Esc > Options > AddOns > MeioTSMBrowse.
 
 ## Commands
