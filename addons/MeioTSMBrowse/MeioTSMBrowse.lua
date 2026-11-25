@@ -446,9 +446,10 @@ local function PatchState()
     return "ok"
 end
 
-local PATCH_HELP = "TSM needs the small patch that comes with " .. NAME .. " (" .. PATCH
-    .. "): run mods.ps1 from the " .. NAME .. " download, then /reload. TSM updates undo"
-    .. " it."
+-- the CurseForge/Wago zip has only the addon; the installer lives in the GitHub download
+local PATCH_HELP = "TSM needs a small patch (" .. PATCH .. "): download the installer from"
+    .. " github.com/MeioNeiz/MeioTSMBrowse (\"TSM patch\" in its page), run it with WoW"
+    .. " closed, then start WoW. TSM updates undo it."
 
 local function PatchMessage()
     local state = PatchState()
