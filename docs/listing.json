@@ -17,9 +17,9 @@
       "description": "Cloth hats up to your level: typed in TSM's filter syntax, then clicked as Armor > Cloth > Head in the category tree"
     },
     {
-      "file": "recipe-skill-ups.png",
-      "title": "Recipe tooltip",
-      "description": "A pattern you can learn, with skill-ups until about 170; Shift shows the orange, yellow, green and grey points"
+      "file": "recipe-in-tsm.png",
+      "title": "Recipe tooltip in TSM",
+      "description": "Tailoring patterns in TSM's Browse tab: hover one to see if you can learn it and until when it gives skill-ups; Shift adds the orange, yellow, green and grey points"
     },
     {
       "file": "recipe-too-high.png",
