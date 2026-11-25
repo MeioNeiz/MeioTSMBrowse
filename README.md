@@ -5,8 +5,9 @@ Categories beside TradeSkillMaster's Browse tab, like the standard auction house
 For WoW Forever. Recipe tooltips work as soon as it's installed; the category panel needs
 a small TSM patch (see "TSM patch" below).
 
-![TSM's Browse tab: before, only its search box; with MeioTSMBrowse, a category tree beside it and
-Recipe > Tailoring searched in one click](docs/before-after.png)
+![Cloth hats up to your level in TSM's Browse tab: before, the filter typed by hand in TSM's
+syntax; with MeioTSMBrowse, the same results from clicking Up to me and Armor > Cloth > Head
+in the category tree beside it](docs/before-after.png)
 
 ## What it does
 
