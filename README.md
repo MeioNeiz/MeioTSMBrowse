@@ -22,10 +22,6 @@ type. Recipe tooltips tell you whether you can learn a recipe and how long it gi
 
 Settings: Esc > Options > AddOns > MeioTSMBrowse.
 
-## Coming soon
-
-- The AH price on recipe tooltips
-
 ## Commands
 
 - `/tsmbrowse`: the list of commands, and whether TSM is patched
