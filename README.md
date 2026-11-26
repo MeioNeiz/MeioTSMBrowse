@@ -1,6 +1,6 @@
 # Meio TSM Browse
 
-Categories beside TradeSkillMaster's Browse tab, like the standard auction house.
+For TradeSkillMaster: categories beside the Browse tab, like the standard auction house.
 
 For WoW Forever. Recipe tooltips work as soon as it's installed; the category panel needs
 a small TSM patch (see "TSM patch" below).

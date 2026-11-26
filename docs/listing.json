@@ -1,7 +1,7 @@
 {
   "title": "Meio TSM Browse",
   "wagoSlug": "tsmbrowse",
-  "summary": "Browse TSM by category like the normal AH; recipe tooltips show skill-ups.",
+  "summary": "Adds categories to TradeSkillMaster's Browse tab, like the normal auction house.",
   "cfCategory": "Auction & Economy",
   "cfExtra": [
     "Professions"
